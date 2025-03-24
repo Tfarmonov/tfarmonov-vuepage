@@ -1,11 +1,10 @@
 <template>
   <div class="hello">
-    <h1>API INTERGRATION CLICK FOR A RANDOM FACT</h1>
-    <button @click="fetchData">Click me!</button>
+    <h1>Random Fact:</h1>
+    <button @click="fetchData">Click Me!</button>
     <p v-if="fact">{{ fact }}</p>
   </div>
 </template>
-
 <script>
 export default {
   props: {
@@ -36,25 +35,8 @@ export default {
     },
   },
 };
-
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+<style>
 button {
 padding: 12px 32px;
 font-size: 16px;
