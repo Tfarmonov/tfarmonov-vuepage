@@ -36,7 +36,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 button {
   padding: 12px 32px;
   font-size: 16px;
