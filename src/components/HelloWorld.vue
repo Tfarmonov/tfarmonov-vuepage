@@ -1,7 +1,8 @@
 <template>
   <div class="hello">
-    <h1>MY GIT HUB PAGES TEST</h1>
+    <h1>API INTERGRATION</h1>
     <button @click="fetchData">Click me!</button>
+    <p v-if="fact">{{ fact }}</p>
   </div>
 </template>
 
@@ -53,5 +54,10 @@ li {
 }
 a {
   color: #42b983;
+}
+button {
+padding: 12px 32px;
+font-size: 16px;
+border-radius: 8px;
 }
 </style>
