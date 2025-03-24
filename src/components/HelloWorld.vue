@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>API INTERGRATION</h1>
+    <h1>API INTERGRATION CLICK FOR A RANDOM FACT</h1>
     <button @click="fetchData">Click me!</button>
     <p v-if="fact">{{ fact }}</p>
   </div>
@@ -21,7 +21,7 @@ export default {
       fetch('https://facts-by-api-ninjas.p.rapidapi.com/v1/facts', {
         method: "GET",
         headers: {
-          "X-RapidAPI-Key": 'your-api-key',
+          "X-RapidAPI-Key": 'a495d6f694msh5105a256b58ac88p1ef101jsnd8b5a7c008e9',
           "X-RapidAPI-Host": 'facts-by-api-ninjas.p.rapidapi.com',
         },
       })
