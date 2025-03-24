@@ -1,16 +1,41 @@
 <template>
   <div class="hello">
     <h1>MY GIT HUB PAGES TEST</h1>
+    <button @click="fetchData">Click me!</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
   props: {
-    msg: String
-  }
-}
+    msg: String,
+  },
+  data() {
+    return {
+      fact: "",
+    };
+  },
+  methods: {
+    fetchData() {
+      fetch('https://facts-by-api-ninjas.p.rapidapi.com/v1/facts', {
+        method: "GET",
+        headers: {
+          "X-RapidAPI-Key": 'your-api-key',
+          "X-RapidAPI-Host": 'facts-by-api-ninjas.p.rapidapi.com',
+        },
+      })
+        .then((response) => {
+          response.json().then((data) => {
+            this.fact = data[0].fact;
+          });
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    },
+  },
+};
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
