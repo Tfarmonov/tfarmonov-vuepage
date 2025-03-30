@@ -1,13 +1,19 @@
 <!-- views/Random-Facts.vue -->
 <template>
     <div>
+    <goBack/>
     <h1>Random Fact:</h1>
     <button @click="fetchData">Click Me!</button>
     <p v-if="fact">{{ fact }}</p>
   </div>
   </template>
   <script>
+  import goBack from '@/components/goBack.vue'
   export default {
+    name: "RandomFacts",
+    components: {
+      goBack,
+    },
     data() {
       return {
         fact: "",
